@@ -1,0 +1,30 @@
+{
+  "name": "barsfashion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiranojhanp/react-ecommerce.git"
+  },
+  "author": "Kiran Ojha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiranojhanp/react-ecommerce/issues"
+  },
+  "homepage": "https://github.com/kiranojhanp/react-ecommerce#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
