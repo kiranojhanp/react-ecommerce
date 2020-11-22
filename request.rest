@@ -1,1 +1,5 @@
 GET http://localhost:5000/api/products
+
+###
+
+GET http://localhost:5000/api/products/5fb9d4e6a769610c6410e8a2
