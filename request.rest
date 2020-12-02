@@ -1,9 +1,23 @@
-GET http://localhost:5000/api/products
+@hostname = http://localhost
+@port = 5000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+// Products
+// Route that have to deal with managing products
+GET {{host}}/api/products
 
 ###
+GET {{host}}/api/products/5fb9d4e6a769610c6410e8a2
 
-GET http://localhost:5000/api/products/5fba4ad55fb5fc2ad0cea1d3
-
+// Users and auth
+// Route that have to deal with managing user and authentication
 ###
+POST {{host}}/api/users/login
+Content-Type: {{contentType}} 
 
-GET http://localhost:5000/api/products/1
+{
+   "email": "admin@test.com",
+   "password": "123456"
+}
+
