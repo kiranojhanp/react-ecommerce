@@ -17,7 +17,11 @@ POST {{host}}/api/users/login
 Content-Type: {{contentType}} 
 
 {
-   "email": "admin@test.com",
+   "email": "john@test.com",
    "password": "123456"
 }
+
+###
+GET {{host}}/api/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4YTAiLCJpYXQiOjE2MDY5MTU5MzMsImV4cCI6MTYwOTUwNzkzM30.GqwEWWxESCFTZM5ALsHMLihN6XzXMYrCwexGM8zMk9E
 
