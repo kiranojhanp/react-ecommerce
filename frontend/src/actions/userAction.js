@@ -20,7 +20,7 @@ export const login = (email, password) => async (dispatch) => {
       },
     };
     // authorize user
-    const { data } = await axios.get(
+    const { data } = await axios.post(
       "/api/users/login",
       {
         email,
@@ -46,4 +46,9 @@ export const login = (email, password) => async (dispatch) => {
           : error.message,
     });
   }
+};
+
+export const logout = () => (dispatch) => {
+  localStorage.removeItem("userInfo");
+  dispatch({ type: USER_LOGOUT });
 };
