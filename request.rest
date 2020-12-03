@@ -12,7 +12,7 @@ GET {{host}}/api/products/5fb9d4e6a769610c6410e8a2
 
 // Users and auth
 // Route that have to deal with managing user and authentication
-###
+### Login
 POST {{host}}/api/users/login
 Content-Type: {{contentType}} 
 
@@ -21,7 +21,16 @@ Content-Type: {{contentType}}
    "password": "123456"
 }
 
-###
+### Get Profile data
 GET {{host}}/api/users/profile
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4YTAiLCJpYXQiOjE2MDY5MTU5MzMsImV4cCI6MTYwOTUwNzkzM30.GqwEWWxESCFTZM5ALsHMLihN6XzXMYrCwexGM8zMk9E
 
+###
+POST {{host}}/api/users/register
+Content-Type: {{contentType}} 
+
+{
+   "name": "Test User",
+   "email": "test@test.com",
+   "password": "123456"
+}
