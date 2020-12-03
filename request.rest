@@ -26,6 +26,17 @@ GET {{host}}/api/users/profile
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4YTAiLCJpYXQiOjE2MDY5MTU5MzMsImV4cCI6MTYwOTUwNzkzM30.GqwEWWxESCFTZM5ALsHMLihN6XzXMYrCwexGM8zMk9E
 
 ###
+PUT {{host}}/api/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4YTAiLCJpYXQiOjE2MDY5MTU5MzMsImV4cCI6MTYwOTUwNzkzM30.GqwEWWxESCFTZM5ALsHMLihN6XzXMYrCwexGM8zMk9E
+Content-Type: {{contentType}} 
+
+{
+   "name": "test",
+   "email": "test@tasty.com",
+   "password": "123456"
+}
+
+###
 POST {{host}}/api/users/register
 Content-Type: {{contentType}} 
 
