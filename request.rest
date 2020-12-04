@@ -23,17 +23,16 @@ Content-Type: {{contentType}}
 
 ### Get Profile data
 GET {{host}}/api/users/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4YTAiLCJpYXQiOjE2MDY5MTU5MzMsImV4cCI6MTYwOTUwNzkzM30.GqwEWWxESCFTZM5ALsHMLihN6XzXMYrCwexGM8zMk9E
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM2NkNWMyZTQzNzBiNjZlNWMiLCJpYXQiOjE2MDcwMzM4MjQsImV4cCI6MTYwOTYyNTgyNH0.ZpPAfLGbQRU-IhSXey0OEbiZOQHoHL3OOpJBbd0YbT4
 
 ###
 PUT {{host}}/api/users/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4YTAiLCJpYXQiOjE2MDY5MTU5MzMsImV4cCI6MTYwOTUwNzkzM30.GqwEWWxESCFTZM5ALsHMLihN6XzXMYrCwexGM8zMk9E
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM2NkNWMyZTQzNzBiNjZlNWMiLCJpYXQiOjE2MDcwMzM4MjQsImV4cCI6MTYwOTYyNTgyNH0.ZpPAfLGbQRU-IhSXey0OEbiZOQHoHL3OOpJBbd0YbT4
 Content-Type: {{contentType}} 
 
 {
-   "name": "test",
-   "email": "test@tasty.com",
-   "password": "123456"
+   "name": "test user",
+   "email": "test@test.com"
 }
 
 ###
