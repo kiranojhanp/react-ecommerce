@@ -7,7 +7,6 @@ import {
 
 export const createOrder = (order) => async (dispatch, getState) => {
   try {
-    // request action
     dispatch({
       type: ORDER_CREATE_REQUEST,
     });
@@ -16,14 +15,13 @@ export const createOrder = (order) => async (dispatch, getState) => {
       userLogin: { userInfo },
     } = getState();
 
-    // set content type
     const config = {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    // authorize user
+
     const { data } = await axios.post(`/api/orders`, order, config);
 
     dispatch({
@@ -31,7 +29,6 @@ export const createOrder = (order) => async (dispatch, getState) => {
       payload: data,
     });
   } catch (error) {
-    // catch error
     dispatch({
       type: ORDER_CREATE_FAIL,
       payload:

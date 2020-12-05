@@ -32,15 +32,13 @@ const PlaceOrderScreen = ({ history }) => {
 
   useEffect(() => {
     if (success) {
-      history.pushState(`/order/${order._id}`);
-      console.log("Success");
+      history.push(`/order/${order._id}`);
     }
-    // 15:20
-    // eslint-disable-next-line 
+    // eslint-disable-next-line
   }, [history, success]);
 
   const placeOrderHandler = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     dispatch(
       createOrder({
         orderItems: cart.cartItems,
@@ -139,7 +137,7 @@ const PlaceOrderScreen = ({ history }) => {
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
-                  {error && <Message variant="danger">{error}</Message>}
+                {error && <Message variant="danger">{error}</Message>}
               </ListGroup.Item>
               <ListGroup.Item>
                 <Button

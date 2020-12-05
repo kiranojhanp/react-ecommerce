@@ -44,3 +44,7 @@ Content-Type: {{contentType}}
    "email": "test@test.com",
    "password": "123456"
 }
+
+###
+
+POST {{host}}/api/orders
