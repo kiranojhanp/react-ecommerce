@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+      <Navbar bg="light" variant="light" expand="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>BarsFashion</Navbar.Brand>
@@ -31,7 +31,7 @@ const Header = () => {
               <LinkContainer to="/cart">
                 <Nav.Link>
                   <i className="fas fa-shopping-cart"></i> Cart{"  "}
-                  <Badge pill variant="secondary">
+                  <Badge pill variant="primary">
                     {cartItems.reduce((acc, item) => acc + item.qty, 0)}
                   </Badge>
                 </Nav.Link>
