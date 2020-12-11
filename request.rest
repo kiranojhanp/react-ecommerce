@@ -49,3 +49,8 @@ Content-Type: {{contentType}}
 // get order data
 GET {{host}}/api/orders/5fcb5af6d9e9fc45f4b3abf9
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM2NkNWMyZTQzNzBiNjZlNWMiLCJpYXQiOjE2MDcwMzM4MjQsImV4cCI6MTYwOTYyNTgyNH0.ZpPAfLGbQRU-IhSXey0OEbiZOQHoHL3OOpJBbd0YbT4
+
+###
+// get my orders
+GET {{host}}/api/orders/myorders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM2NkNWMyZTQzNzBiNjZlNWMiLCJpYXQiOjE2MDcwMzM4MjQsImV4cCI6MTYwOTYyNTgyNH0.ZpPAfLGbQRU-IhSXey0OEbiZOQHoHL3OOpJBbd0YbT4
