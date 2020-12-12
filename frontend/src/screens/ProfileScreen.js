@@ -33,8 +33,6 @@ const ProfileScreen = ({ history }) => {
     error: myOrdersError,
   } = myOrderList;
 
-  localStorage.setItem("userInfo", JSON.stringify(userInfo));
-
   useEffect(() => {
     if (!userInfo) {
       history.push("/login");

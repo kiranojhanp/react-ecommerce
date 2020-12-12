@@ -3,8 +3,6 @@
 @host = {{hostname}}:{{port}}
 @contentType = application/json
 
-@adminToken = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4OWYiLCJpYXQiOjE2MDc3NTM5NDksImV4cCI6MTYxMDM0NTk0OX0.4060akgT3EBpprTQXP63P73UYRVeLxjY5q7qVRacuN0
-
 // Products
 // Route that have to deal with managing products
 GET {{host}}/api/products
@@ -61,4 +59,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM
 // Admin endpoints
 
 GET {{host}}/api/users
-Authorization: {{@adminToken}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4OWYiLCJpYXQiOjE2MDc3NTMyMTYsImV4cCI6MTYxMDM0NTIxNn0.d6UBaW6hEw9c3ivj1arJjNVu_cTCR9rSZ-0dviOmWdk
