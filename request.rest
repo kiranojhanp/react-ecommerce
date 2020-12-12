@@ -17,13 +17,13 @@ POST {{host}}/api/users/login
 Content-Type: {{contentType}} 
 
 {
-   "email": "admin@test.com",
+   "email": "kiran@test.com",
    "password": "123456"
 }
 
 ### Get Profile data
 GET {{host}}/api/users/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM2NkNWMyZTQzNzBiNjZlNWMiLCJpYXQiOjE2MDcwMzM4MjQsImV4cCI6MTYwOTYyNTgyNH0.ZpPAfLGbQRU-IhSXey0OEbiZOQHoHL3OOpJBbd0YbT4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3ODEyMjgsImV4cCI6MTYxMDM3MzIyOH0.fhf7-uEDjZ0USghq6jDocuozAvYYSt2S2o3rkRs-eqA
 
 ###
 PUT {{host}}/api/users/profile
@@ -62,8 +62,8 @@ GET {{host}}/api/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3NzMxNzIsImV4cCI6MTYxMDM2NTE3Mn0.Da3c72TMeqolnw8pN-ACMOCeLFJjBpb4pqbECl9nCD0
 
 ###
-GET {{host}}/api/users/5fd4b65a1fc3a52b086e26a1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3NzMxNzIsImV4cCI6MTYxMDM2NTE3Mn0.Da3c72TMeqolnw8pN-ACMOCeLFJjBpb4pqbECl9nCD0
+GET {{host}}/api/users/5fd4abda0a3f8f1a2c8be9a9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3ODEyMjgsImV4cCI6MTYxMDM3MzIyOH0.fhf7-uEDjZ0USghq6jDocuozAvYYSt2S2o3rkRs-eqA
 
 ###
 PUT {{host}}/api/users/5fd4b65a1fc3a52b086e26a1
