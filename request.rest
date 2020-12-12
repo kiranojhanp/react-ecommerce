@@ -60,3 +60,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM
 
 GET {{host}}/api/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4OWYiLCJpYXQiOjE2MDc3NTMyMTYsImV4cCI6MTYxMDM0NTIxNn0.d6UBaW6hEw9c3ivj1arJjNVu_cTCR9rSZ-0dviOmWdk
+
+###
+DELETE {{host}}/api/users/5fb9d4e6a769610c6410e8a0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4OWYiLCJpYXQiOjE2MDc3NTMyMTYsImV4cCI6MTYxMDM0NTIxNn0.d6UBaW6hEw9c3ivj1arJjNVu_cTCR9rSZ-0dviOmWdk
