@@ -3,6 +3,8 @@
 @host = {{hostname}}:{{port}}
 @contentType = application/json
 
+@adminToken = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4OWYiLCJpYXQiOjE2MDc3NTM5NDksImV4cCI6MTYxMDM0NTk0OX0.4060akgT3EBpprTQXP63P73UYRVeLxjY5q7qVRacuN0
+
 // Products
 // Route that have to deal with managing products
 GET {{host}}/api/products
@@ -17,7 +19,7 @@ POST {{host}}/api/users/login
 Content-Type: {{contentType}} 
 
 {
-   "email": "test@test.com",
+   "email": "admin@test.com",
    "password": "123456"
 }
 
@@ -54,3 +56,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM
 // get my orders
 GET {{host}}/api/orders/myorders
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM2NkNWMyZTQzNzBiNjZlNWMiLCJpYXQiOjE2MDcwMzM4MjQsImV4cCI6MTYwOTYyNTgyNH0.ZpPAfLGbQRU-IhSXey0OEbiZOQHoHL3OOpJBbd0YbT4
+
+###
+// Admin endpoints
+
+GET {{host}}/api/users
+Authorization: {{@adminToken}}
