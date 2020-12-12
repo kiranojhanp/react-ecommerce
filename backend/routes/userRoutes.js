@@ -7,6 +7,8 @@ import {
   updateUserProfile,
   getUsers,
   deleteUser,
+  getUserById,
+  updateUserById,
 } from "../controllers/userController.js";
 import { protect, admin } from "../middlewares/authMiddleware.js";
 
@@ -18,6 +20,10 @@ router
   .put(protect, updateUserProfile);
 
 router.route("/").get(protect, admin, getUsers);
-router.route("/:id").delete(protect, admin, deleteUser);
+router
+  .route("/:id")
+  .get(protect, admin, getUserById)
+  .put(protect, admin, updateUserById)
+  .delete(protect, admin, deleteUser);
 
 export default router;

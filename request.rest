@@ -40,8 +40,8 @@ POST {{host}}/api/users/register
 Content-Type: {{contentType}} 
 
 {
-   "name": "Test User",
-   "email": "test@test.com",
+   "name": "Kamal Ojha",
+   "email": "kamal@test.com",
    "password": "123456"
 }
 
@@ -59,8 +59,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM
 // Admin endpoints
 
 GET {{host}}/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4OWYiLCJpYXQiOjE2MDc3NTMyMTYsImV4cCI6MTYxMDM0NTIxNn0.d6UBaW6hEw9c3ivj1arJjNVu_cTCR9rSZ-0dviOmWdk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3NzMxNzIsImV4cCI6MTYxMDM2NTE3Mn0.Da3c72TMeqolnw8pN-ACMOCeLFJjBpb4pqbECl9nCD0
 
 ###
-DELETE {{host}}/api/users/5fb9d4e6a769610c6410e8a0
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI5ZDRlNmE3Njk2MTBjNjQxMGU4OWYiLCJpYXQiOjE2MDc3NTMyMTYsImV4cCI6MTYxMDM0NTIxNn0.d6UBaW6hEw9c3ivj1arJjNVu_cTCR9rSZ-0dviOmWdk
+GET {{host}}/api/users/5fd4b65a1fc3a52b086e26a1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3NzMxNzIsImV4cCI6MTYxMDM2NTE3Mn0.Da3c72TMeqolnw8pN-ACMOCeLFJjBpb4pqbECl9nCD0
+
+###
+PUT {{host}}/api/users/5fd4b65a1fc3a52b086e26a1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3NzMxNzIsImV4cCI6MTYxMDM2NTE3Mn0.Da3c72TMeqolnw8pN-ACMOCeLFJjBpb4pqbECl9nCD0
+Content-Type: {{contentType}} 
+
+{
+   "name": "Admin Kamal",
+   "email": "kamal@test.com",
+   "isAdmin": "true"
+}
