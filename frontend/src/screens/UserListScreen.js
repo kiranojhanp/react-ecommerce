@@ -4,7 +4,7 @@ import { Table, Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
-import { listUsers } from "../actions/userAction";
+import { listUsers, deleteUser } from "../actions/userAction";
 
 const UserListScreen = ({ history }) => {
   const dispatch = useDispatch();
@@ -15,16 +15,21 @@ const UserListScreen = ({ history }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  const userDelete = useSelector((state) => state.userDelete);
+  const { success: successDelete } = userDelete;
+
   useEffect(() => {
     if (userInfo && userInfo.isAdmin) {
       dispatch(listUsers());
     } else {
       history.push("/login");
     }
-  }, [dispatch, userInfo, history]);
+  }, [dispatch, userInfo, history, successDelete]);
 
   const deleteHandler = (id) => {
-    console.log(`${id} deleted`);
+    if (window.confirm("Are you sure")) {
+      dispatch(deleteUser(id));
+    }
   };
 
   return (
@@ -62,12 +67,12 @@ const UserListScreen = ({ history }) => {
                 </td>
                 <td>
                   <LinkContainer to={`/user/${user._id}/edit`}>
-                    <Button variant="light" className="btn-sm">
+                    <Button variant="info" className="btn-sm mx-2">
                       <i className="fas fa-edit"></i>
                     </Button>
                   </LinkContainer>
                   <Button
-                    variant="danger"
+                    variant="primary"
                     className="btn-sm"
                     onClick={() => deleteHandler(user._id)}
                   >
