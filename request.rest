@@ -79,3 +79,13 @@ Content-Type: {{contentType}}
 // delete product
 DELETE {{host}}/api/products/5fd4abda0a3f8f1a2c8be9b0
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTkiLCJpYXQiOjE2MTAwMDM1NjcsImV4cCI6MTYxMjU5NTU2N30.1XcqM78ExbOZUhiAM0qYAw_25Vp3JFwafld8vObNQE8
+
+
+###
+POST https://reqres.in/api/users
+Content-Type: {{contentType}} 
+
+{
+    "name": "morpheus",
+    "job": "leader"
+}

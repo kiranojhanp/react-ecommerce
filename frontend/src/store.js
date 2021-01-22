@@ -23,8 +23,6 @@ import {
   myOrderListReducer,
 } from "./reducers/orderReducer";
 
-// part 10 pt.2 -> video 6 completed
-
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
