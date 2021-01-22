@@ -107,18 +107,6 @@ export const createProduct = () => async (dispatch, getState) => {
       },
     };
 
-    // const data = {
-    //   name: "Sample name",
-    //   image: "/images/airpods.jpg",
-    //   description: "Sample description",
-    //   brand: "Sample brand",
-    //   category: "Sample category",
-    //   price: 0,
-    //   countInStock: 0,
-    //   numReviews: 0,
-    //   user: req.user._id,
-    // };
-
     // create action
     const { data } = await axios.post(`/api/products`, {}, config);
 
