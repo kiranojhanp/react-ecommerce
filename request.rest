@@ -61,6 +61,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM4YjcwM
 GET {{host}}/api/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3NzMxNzIsImV4cCI6MTYxMDM2NTE3Mn0.Da3c72TMeqolnw8pN-ACMOCeLFJjBpb4pqbECl9nCD0
 
+
 ###
 GET {{host}}/api/users/5fd4abda0a3f8f1a2c8be9a9
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3ODEyMjgsImV4cCI6MTYxMDM3MzIyOH0.fhf7-uEDjZ0USghq6jDocuozAvYYSt2S2o3rkRs-eqA
@@ -80,6 +81,28 @@ Content-Type: {{contentType}}
 DELETE {{host}}/api/products/5fd4abda0a3f8f1a2c8be9b0
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTkiLCJpYXQiOjE2MTAwMDM1NjcsImV4cCI6MTYxMjU5NTU2N30.1XcqM78ExbOZUhiAM0qYAw_25Vp3JFwafld8vObNQE8
 
+###
+POST {{host}}/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTkiLCJpYXQiOjE2MTAwMDM1NjcsImV4cCI6MTYxMjU5NTU2N30.1XcqM78ExbOZUhiAM0qYAw_25Vp3JFwafld8vObNQE8
+
+###
+PUT {{host}}/api/products/600abcdfb5d4eb04a0c4a826
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTkiLCJpYXQiOjE2MTAwMDM1NjcsImV4cCI6MTYxMjU5NTU2N30.1XcqM78ExbOZUhiAM0qYAw_25Vp3JFwafld8vObNQE8
+Content-Type: {{contentType}} 
+
+{
+  "numReviews": 0,
+  "price": 10,
+  "countInStock": 0,
+  "name": "Sample name updated",
+  "image": "/images/airpods.jpg",
+  "description": "Sample description updated",
+  "brand": "Sample brand",
+  "category": "Sample category"
+}
+
+###
+GET {{host}}/api/products/600abcdfb5d4eb04a0c4a826
 
 ###
 POST https://reqres.in/api/users
