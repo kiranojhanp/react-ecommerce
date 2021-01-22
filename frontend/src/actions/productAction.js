@@ -6,7 +6,15 @@ import {
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_DETAILS_FAIL,
+  PRODUCT_DELETE_REQUEST,
+  PRODUCT_DELETE_SUCCESS,
+  PRODUCT_DELETE_FAIL,
+  PRODUCT_CREATE_REQUEST,
+  PRODUCT_CREATE_SUCCESS,
+  PRODUCT_CREATE_FAIL,
 } from "../constants/productConstants";
+
+import { logout } from "./userAction";
 
 export const listProducts = () => async (dispatch) => {
   try {
@@ -44,6 +52,91 @@ export const detailsProduct = (id) => async (dispatch) => {
         error.response && error.response.data.message
           ? error.response.data.message
           : error.message,
+    });
+  }
+};
+
+export const deleteProduct = (id) => async (dispatch, getState) => {
+  try {
+    // request action
+    dispatch({ type: PRODUCT_DELETE_REQUEST });
+
+    const {
+      userLogin: { userInfo },
+    } = getState();
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
+
+    // delete action
+    await axios.delete(`/api/products/${id}`, config);
+    dispatch({ type: PRODUCT_DELETE_SUCCESS });
+  } catch (error) {
+    // catch error action
+
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    if (message === "Not authorized, token failed") {
+      dispatch(logout());
+    }
+
+    dispatch({
+      type: PRODUCT_DELETE_FAIL,
+      payload: message,
+    });
+  }
+};
+
+export const createProduct = () => async (dispatch, getState) => {
+  try {
+    // request action
+    dispatch({ type: PRODUCT_CREATE_REQUEST });
+
+    const {
+      userLogin: { userInfo },
+    } = getState();
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
+
+    // const data = {
+    //   name: "Sample name",
+    //   image: "/images/airpods.jpg",
+    //   description: "Sample description",
+    //   brand: "Sample brand",
+    //   category: "Sample category",
+    //   price: 0,
+    //   countInStock: 0,
+    //   numReviews: 0,
+    //   user: req.user._id,
+    // };
+
+    // create action
+    const { data } = await axios.post(`/api/products`, {}, config);
+
+    dispatch({ type: PRODUCT_CREATE_SUCCESS, payload: data });
+  } catch (error) {
+    // catch error action
+
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    if (message === "Not authorized, token failed") {
+      dispatch(logout());
+    }
+
+    dispatch({
+      type: PRODUCT_CREATE_FAIL,
+      payload: message,
     });
   }
 };
