@@ -12,6 +12,9 @@ import {
   ORDER_MY_ORDERS_REQUEST,
   ORDER_MY_ORDERS_SUCCESS,
   ORDER_MY_ORDERS_FAIL,
+  ORDER_ALL_ORDERS_REQUEST,
+  ORDER_ALL_ORDERS_SUCCESS,
+  ORDER_ALL_ORDERS_FAIL,
 } from "../constants/orderConstants";
 
 import { logout } from "./userAction";
@@ -124,6 +127,42 @@ export const listMyOrders = () => async (dispatch, getState) => {
 
     dispatch({
       type: ORDER_MY_ORDERS_FAIL,
+      payload: message,
+    });
+  }
+};
+
+export const listAllOrders = () => async (dispatch, getState) => {
+  try {
+    // request action
+    dispatch({ type: ORDER_ALL_ORDERS_REQUEST });
+
+    const {
+      userLogin: { userInfo },
+    } = getState();
+
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
+
+    // fetch action
+    const { data } = await axios.get(`/api/orders`, config);
+    dispatch({ type: ORDER_ALL_ORDERS_SUCCESS, payload: data });
+  } catch (error) {
+    // catch error action
+
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+    if (message === "Not authorized, token failed") {
+      dispatch(logout());
+    }
+
+    dispatch({
+      type: ORDER_ALL_ORDERS_FAIL,
       payload: message,
     });
   }
