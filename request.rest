@@ -17,7 +17,7 @@ POST {{host}}/api/users/login
 Content-Type: {{contentType}} 
 
 {
-   "email": "john@test.com",
+   "email": "admin@test.com",
    "password": "123456"
 }
 
@@ -103,6 +103,10 @@ Content-Type: {{contentType}}
 
 ###
 GET {{host}}/api/products/600abcdfb5d4eb04a0c4a826
+
+###
+GET {{host}}/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDBhZDUyMzMyYzE0MTM2N2NiN2RkNDEiLCJpYXQiOjE2MTEzNzkxNDQsImV4cCI6MTYxMzk3MTE0NH0.jLlmIPcAYgJNqVgMZDqvyS0Dco0P0eGvgb94TxXY6ZE
 
 ###
 POST https://reqres.in/api/users
