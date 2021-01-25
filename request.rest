@@ -17,13 +17,13 @@ POST {{host}}/api/users/login
 Content-Type: {{contentType}} 
 
 {
-   "email": "john@test.com",
+   "email": "admin@test.com",
    "password": "123456"
 }
 
 ### Get Profile data
 GET {{host}}/api/users/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmQ0YWJkYTBhM2Y4ZjFhMmM4YmU5YTgiLCJpYXQiOjE2MDc3ODEyMjgsImV4cCI6MTYxMDM3MzIyOH0.fhf7-uEDjZ0USghq6jDocuozAvYYSt2S2o3rkRs-eqA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDBlMzYwYzY5OTlmMTNiYWNmNmE1NjUiLCJpYXQiOjE2MTE1NDQwOTYsImV4cCI6MTYxNDEzNjA5Nn0.llGsWHaV2l80kRfmt2mbkTRInLFF3aucNHtld44goe8
 
 ###
 PUT {{host}}/api/users/profile
@@ -102,7 +102,7 @@ Content-Type: {{contentType}}
 }
 
 ###
-GET {{host}}/api/products/600baf8060f6fe3730ff640a
+GET {{host}}/api/products/600e360c6999f13bacf6a568
 
 ###
 GET {{host}}/api/orders
@@ -112,8 +112,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDBhZDUyM
 
 
 ###
-GET {{host}}/api/products/600baf8060f6fe3730ff640a/reviews
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDBhZDUyMzMyYzE0MTM2N2NiN2RkNDEiLCJpYXQiOjE2MTEzNzkxNDQsImV4cCI6MTYxMzk3MTE0NH0.jLlmIPcAYgJNqVgMZDqvyS0Dco0P0eGvgb94TxXY6ZE
+GET {{host}}/api/products/600e360c6999f13bacf6a568/reviews
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDBlMzYwYzY5OTlmMTNiYWNmNmE1NjUiLCJpYXQiOjE2MTE1NDQwOTYsImV4cCI6MTYxNDEzNjA5Nn0.llGsWHaV2l80kRfmt2mbkTRInLFF3aucNHtld44goe8
 Content-Type: {{contentType}} 
 
 {

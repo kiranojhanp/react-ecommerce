@@ -12,6 +12,9 @@ import { protect, admin } from "../middlewares/authMiddleware.js";
 
 router.route("/").get(getProducts).post(protect, admin, createProduct);
 
+const demo = (req, res) => {
+  console.log(req.user);
+};
 
 router
 .route("/:id")
@@ -19,6 +22,7 @@ router
 .put(protect, admin, updateProduct)
 .delete(protect, admin, deleteProduct);
 
-router.route("/:id/review").post(protect, createProductReview);
+router.route("/:id/review").post(protect, createProduct);
+
 
 export default router;

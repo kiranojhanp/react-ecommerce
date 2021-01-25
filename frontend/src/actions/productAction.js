@@ -19,13 +19,19 @@ import {
 
 import { logout } from "./userAction";
 
-export const listProducts = (keyword = "") => async (dispatch) => {
+export const listProducts = (keyword = "", pageNumber = "") => async (
+  dispatch
+) => {
   try {
     // request action
     dispatch({ type: PRODUCT_LIST_REQUEST });
 
     // fetch action
-    const { data } = await axios.get(`/api/products?keyword=${keyword}`);
+    const { data } = await axios.get(
+      
+      `/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+    
+    );
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
   } catch (error) {
     // catch error action

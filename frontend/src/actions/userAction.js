@@ -135,6 +135,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
+
     // authorize user
     const { data } = await axios.get(`/api/users/${id}`, config);
 
@@ -241,6 +242,7 @@ export const listUsers = () => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
+
     // authorize user
     const { data } = await axios.get(`/api/users`, config);
 
