@@ -129,3 +129,6 @@ Content-Type: {{contentType}}
     "name": "morpheus",
     "job": "leader"
 }
+
+###
+GET {{host}}/api/products/top
