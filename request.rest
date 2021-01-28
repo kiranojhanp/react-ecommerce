@@ -112,13 +112,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDBhZDUyM
 
 
 ###
-GET {{host}}/api/products/600e360c6999f13bacf6a568/reviews
+POST {{host}}/api/products/600e360c6999f13bacf6a568/review
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDBlMzYwYzY5OTlmMTNiYWNmNmE1NjUiLCJpYXQiOjE2MTE1NDQwOTYsImV4cCI6MTYxNDEzNjA5Nn0.llGsWHaV2l80kRfmt2mbkTRInLFF3aucNHtld44goe8
 Content-Type: {{contentType}} 
 
 {
     "rating": 5,
-    "comment": "This is awesome actually"
+    "comment": "I loved it so much"
 }
 
 ###
