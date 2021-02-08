@@ -41,9 +41,10 @@ Content-Type: {{contentType}}
 
 {
    "name": "Kamal Ojha",
-   "email": "kamal@test.com",
+   "email": "kamal11@test.com",
    "password": "123456"
 }
+
 
 ###
 // get order data
